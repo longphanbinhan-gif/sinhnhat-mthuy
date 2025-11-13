@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng sinh nhật Minh Thùy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .bubbles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 10s infinite ease-in;
+        }
+
+        .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 8s; }
+        .bubble:nth-child(2) { width: 20px; height: 20px; left: 20%; animation-duration: 5s; animation-delay: 1s; }
+        .bubble:nth-child(3) { width: 50px; height: 50px; left: 35%; animation-duration: 7s; animation-delay: 2s; }
+        .bubble:nth-child(4) { width: 80px; height: 80px; left: 50%; animation-duration: 11s; animation-delay: 0s; }
+        .bubble:nth-child(5) { width: 35px; height: 35px; left: 55%; animation-duration: 6s; animation-delay: 1s; }
+        .bubble:nth-child(6) { width: 45px; height: 45px; left: 65%; animation-duration: 8s; animation-delay: 3s; }
+        .bubble:nth-child(7) { width: 25px; height: 25px; left: 75%; animation-duration: 7s; animation-delay: 2s; }
+        .bubble:nth-child(8) { width: 80px; height: 80px; left: 80%; animation-duration: 6s; animation-delay: 1s; }
+        .bubble:nth-child(9) { width: 15px; height: 15px; left: 70%; animation-duration: 9s; animation-delay: 0s; }
+        .bubble:nth-child(10) { width: 50px; height: 50px; left: 25%; animation-duration: 7s; animation-delay: 1s; }
+
+        @keyframes rise {
+            0% { bottom: -100px; transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { bottom: 1080px; transform: translateX(-200px); }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 20px;
+            background-color: #f00;
+            opacity: 0.7;
+            animation: confetti-fall 5s linear infinite;
+            z-index: 100;
+        }
+
+        @keyframes confetti-fall {
+            0% { top: -10%; transform: rotate(0deg); }
+            100% { top: 100%; transform: rotate(360deg); }
+        }
+
+        .header {
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-out;
+            border: 2px solid rgba(255, 193, 227, 0.5);
+        }
+
+        h1 {
+            color: #c2185b;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+            white-space: nowrap;
+        }
+
+        h2 {
+            color: #6a1b9a;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            gap: 30px;
+            max-width: 1200px;
+            animation: slideUp 1s ease-out;
+        }
+
+        .character {
+            width: 250px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .character:hover {
+            transform: scale(1.05);
+        }
+
+        .chibi-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chibi {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            padding: 10px;
+            transition: transform 0.4s;
+            object-fit: cover;
+            border: 5px solid #ffc1e3;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .chibi:hover {
+            transform: rotate(-2deg) scale(1.08);
+        }
+
+        .chibi-label {
+            margin-top: 15px;
+            background: #ffc1e3;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            color: #6a1b9a;
+            animation: bounce 2s infinite;
+            font-size: 1.1em;
+        }
+
+        .birthday-info {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 2s ease-out;
+            border: 2px solid rgba(255, 193, 227, 0.3);
+        }
+
+        .birthday-info p {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #777;
+            background: rgba(255, 238, 245, 0.9);
+            padding: 20px 0;
+            border-top: 2px solid #ffc1e3;
+            backdrop-filter: blur(5px);
+        }
+
+        .balloon {
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            background: #ff6b9d;
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .balloon:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background: #ff6b9d;
+            top: 50px;
+            left: 19px;
+        }
+
+        .balloon:nth-child(1) { top: -20px; left: 30px; background: #ff9ec5; animation-delay: 0s; }
+        .balloon:nth-child(2) { top: -10px; right: 40px; background: #ffc1e3; animation-delay: 0.5s; }
+        .balloon:nth-child(3) { bottom: 20px; left: 20px; background: #ff9ec5; animation-delay: 1s; }
+        .balloon:nth-child(4) { bottom: 10px; right: 30px; background: #ffc1e3; animation-delay: 1.5s; }
+
+        .candles {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .candle {
+            width: 20px;
+            height: 60px;
+            background: #fff;
+            border-radius: 10px 10px 0 0;
+            margin: 0 10px;
+            position: relative;
+            box-shadow: inset -5px 0 0 #f0f0f0;
+        }
+
+        .candle:before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 20px;
+            background: #ff9d00;
+            border-radius: 50%;
+            top: -10px;
+            left: 2px;
+            animation: flicker 1.5s infinite alternate;
+            box-shadow: 0 0 10px #ff9d00, 0 0 20px #ff9d00;
+        }
+
+        .birthday-title {
+            font-size: 2.8em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #d35400, #c2185b, #7b1fa2, #0288d1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: gentlePulse 3s infinite alternate;
+            padding: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: nowrap;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes gentlePulse {
+            0% { transform: scale(1); text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+            100% { transform: scale(1.02); text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.8; transform: scaleY(1.1); }
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .character { width: 200px; }
+            .chibi { width: 250px; height: 250px; }
+            .birthday-title { font-size: 2em; gap: 8px; }
+            h2 { font-size: 1.2em; }
+        }
+
+        @media (max-width: 480px) {
+            .birthday-title { font-size: 1.6em; gap: 5px; }
+            h2 { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bubbles">
+        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+        <div class="bubble"></div><div class="bubble"></div>
+    </div>
+
+    <div id="confetti-container"></div>
+
+    <div class="header">
+        <h1 class="birthday-title">
+            <span>🎉</span>Chúc Mừng Sinh Nhật Minh Thùy<span>🎉</span>
+        </h1>
+        <h2>13/11/2003 — Môn yêu thích: Địa Lý 🌍</h2>
+        
+        <div class="candles">
+            <div class="candle"></div><div class="candle"></div><div class="candle"></div>
+            <div class="candle"></div><div class="candle"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="https://lienquan.garena.vn/wp-content/uploads/2024/07/11817.jpg" alt="Tướng bên trái" class="character" />
+        
+        <div class="chibi-container">
+            <div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div>
+            <img src="https://i.postimg.cc/fRkRgxr6/minh-thi.jpg" alt="Minh Thùy" class="chibi" />
+            <div class="chibi-label">Càlemcây</div>
+        </div>
+        
+        <img src="https://lienquan.garena.vn/wp-content/uploads/2024/07/51911.jpg" alt="Tướng bên phải" class="character" />
+    </div>
+
+    <div class="birthday-info">
+        <p>Chúc Thuỳ luôn vui vẻ, xinh đẹp và đạt nhiều thành công trong cuộc sống!</p>
+        <p>Hy vọng tuổi mới mang đến thật nhiều niềm vui và may mắn 🍀</p>
+        <p>Mong rằng mọi ước mơ của bà sẽ thành hiện thực! ✨</p>
+    </div>
+
+    <div class="footer">
+        <p>Gửi tặng Minh Thùy — từ những người bạn luôn quý bà ✨</p>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#ff6b6b', '#48dbfb', '#1dd1a1', '#feca57', '#ff9ff3', '#54a0ff'];
+            
+            for (let i = 0; i < 80; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.width = Math.random() * 8 + 4 + 'px';
+                confetti.style.height = Math.random() * 15 + 8 + 'px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(confetti);
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.width = '15px';
+            sparkle.style.height = '15px';
+            sparkle.style.background = 'radial-gradient(circle, #fff, #ffd700, transparent)';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '1000';
+            sparkle.style.animation = `sparkle 1s ease-out forwards`;
+            
+            document.body.appendChild(sparkle);
+            setTimeout(() => document.body.removeChild(sparkle), 1000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createConfetti();
+        });
+    </script>
+</body>
+</html>
