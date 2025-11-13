@@ -22,7 +22,6 @@
             position: relative;
         }
 
-        /* Hiệu ứng bong bóng nền */
         .bubbles {
             position: fixed;
             width: 100%;
@@ -41,100 +40,23 @@
             animation: rise 10s infinite ease-in;
         }
 
-        .bubble:nth-child(1) {
-            width: 40px;
-            height: 40px;
-            left: 10%;
-            animation-duration: 8s;
-        }
-
-        .bubble:nth-child(2) {
-            width: 20px;
-            height: 20px;
-            left: 20%;
-            animation-duration: 5s;
-            animation-delay: 1s;
-        }
-
-        .bubble:nth-child(3) {
-            width: 50px;
-            height: 50px;
-            left: 35%;
-            animation-duration: 7s;
-            animation-delay: 2s;
-        }
-
-        .bubble:nth-child(4) {
-            width: 80px;
-            height: 80px;
-            left: 50%;
-            animation-duration: 11s;
-            animation-delay: 0s;
-        }
-
-        .bubble:nth-child(5) {
-            width: 35px;
-            height: 35px;
-            left: 55%;
-            animation-duration: 6s;
-            animation-delay: 1s;
-        }
-
-        .bubble:nth-child(6) {
-            width: 45px;
-            height: 45px;
-            left: 65%;
-            animation-duration: 8s;
-            animation-delay: 3s;
-        }
-
-        .bubble:nth-child(7) {
-            width: 25px;
-            height: 25px;
-            left: 75%;
-            animation-duration: 7s;
-            animation-delay: 2s;
-        }
-
-        .bubble:nth-child(8) {
-            width: 80px;
-            height: 80px;
-            left: 80%;
-            animation-duration: 6s;
-            animation-delay: 1s;
-        }
-
-        .bubble:nth-child(9) {
-            width: 15px;
-            height: 15px;
-            left: 70%;
-            animation-duration: 9s;
-            animation-delay: 0s;
-        }
-
-        .bubble:nth-child(10) {
-            width: 50px;
-            height: 50px;
-            left: 25%;
-            animation-duration: 7s;
-            animation-delay: 1s;
-        }
+        .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 8s; }
+        .bubble:nth-child(2) { width: 20px; height: 20px; left: 20%; animation-duration: 5s; animation-delay: 1s; }
+        .bubble:nth-child(3) { width: 50px; height: 50px; left: 35%; animation-duration: 7s; animation-delay: 2s; }
+        .bubble:nth-child(4) { width: 80px; height: 80px; left: 50%; animation-duration: 11s; animation-delay: 0s; }
+        .bubble:nth-child(5) { width: 35px; height: 35px; left: 55%; animation-duration: 6s; animation-delay: 1s; }
+        .bubble:nth-child(6) { width: 45px; height: 45px; left: 65%; animation-duration: 8s; animation-delay: 3s; }
+        .bubble:nth-child(7) { width: 25px; height: 25px; left: 75%; animation-duration: 7s; animation-delay: 2s; }
+        .bubble:nth-child(8) { width: 80px; height: 80px; left: 80%; animation-duration: 6s; animation-delay: 1s; }
+        .bubble:nth-child(9) { width: 15px; height: 15px; left: 70%; animation-duration: 9s; animation-delay: 0s; }
+        .bubble:nth-child(10) { width: 50px; height: 50px; left: 25%; animation-duration: 7s; animation-delay: 1s; }
 
         @keyframes rise {
-            0% {
-                bottom: -100px;
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(100px);
-            }
-            100% {
-                bottom: 1080px;
-                transform: translateX(-200px);
-            }
+            0% { bottom: -100px; transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { bottom: 1080px; transform: translateX(-200px); }
         }
 
-        /* Hiệu ứng confetti */
         .confetti {
             position: fixed;
             width: 10px;
@@ -146,17 +68,10 @@
         }
 
         @keyframes confetti-fall {
-            0% {
-                top: -10%;
-                transform: rotate(0deg);
-            }
-            100% {
-                top: 100%;
-                transform: rotate(360deg);
-            }
+            0% { top: -10%; transform: rotate(0deg); }
+            100% { top: 100%; transform: rotate(360deg); }
         }
 
-        /* Header */
         .header {
             padding: 30px 20px;
             background: rgba(255, 255, 255, 0.9);
@@ -176,21 +91,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             animation: pulse 2s infinite;
             white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .title-container {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-            gap: 10px;
-            white-space: nowrap;
-        }
-
-        .title-icon {
-            font-size: 1.2em;
-            display: inline-block;
         }
 
         h2 {
@@ -205,7 +105,6 @@
             flex-wrap: wrap;
         }
 
-        /* Container chính */
         .container {
             display: flex;
             justify-content: center;
@@ -264,7 +163,6 @@
             font-size: 1.1em;
         }
 
-        /* Thông điệp chúc mừng */
         .birthday-info {
             margin-top: 20px;
             font-size: 18px;
@@ -286,7 +184,6 @@
             line-height: 1.6;
         }
 
-        /* Footer */
         .footer {
             margin-top: 40px;
             font-size: 16px;
@@ -297,7 +194,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Hiệu ứng bóng bay */
         .balloon {
             position: absolute;
             width: 40px;
@@ -318,35 +214,11 @@
             left: 19px;
         }
 
-        .balloon:nth-child(1) {
-            top: -20px;
-            left: 30px;
-            background: #ff9ec5;
-            animation-delay: 0s;
-        }
+        .balloon:nth-child(1) { top: -20px; left: 30px; background: #ff9ec5; animation-delay: 0s; }
+        .balloon:nth-child(2) { top: -10px; right: 40px; background: #ffc1e3; animation-delay: 0.5s; }
+        .balloon:nth-child(3) { bottom: 20px; left: 20px; background: #ff9ec5; animation-delay: 1s; }
+        .balloon:nth-child(4) { bottom: 10px; right: 30px; background: #ffc1e3; animation-delay: 1.5s; }
 
-        .balloon:nth-child(2) {
-            top: -10px;
-            right: 40px;
-            background: #ffc1e3;
-            animation-delay: 0.5s;
-        }
-
-        .balloon:nth-child(3) {
-            bottom: 20px;
-            left: 20px;
-            background: #ff9ec5;
-            animation-delay: 1s;
-        }
-
-        .balloon:nth-child(4) {
-            bottom: 10px;
-            right: 30px;
-            background: #ffc1e3;
-            animation-delay: 1.5s;
-        }
-
-        /* Hiệu ứng nến */
         .candles {
             display: flex;
             justify-content: center;
@@ -376,7 +248,6 @@
             box-shadow: 0 0 10px #ff9d00, 0 0 20px #ff9d00;
         }
 
-        /* Chữ tiêu đề */
         .birthday-title {
             font-size: 2.8em;
             font-weight: 700;
@@ -393,7 +264,6 @@
             flex-wrap: nowrap;
         }
 
-        /* Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
@@ -411,14 +281,8 @@
         }
 
         @keyframes gentlePulse {
-            0% { 
-                transform: scale(1);
-                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            100% { 
-                transform: scale(1.02);
-                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            }
+            0% { transform: scale(1); text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+            100% { transform: scale(1.02); text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
         }
 
         @keyframes fadeIn {
@@ -427,140 +291,73 @@
         }
 
         @keyframes slideUp {
-            from { 
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes flicker {
-            0%, 100% { 
-                opacity: 1; 
-                transform: scaleY(1);
-            }
-            50% { 
-                opacity: 0.8; 
-                transform: scaleY(1.1);
-            }
+            0%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.8; transform: scaleY(1.1); }
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .character {
-                width: 200px;
-            }
-            
-            .chibi {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .birthday-title {
-                font-size: 2em;
-                gap: 8px;
-            }
-            
-            h2 {
-                font-size: 1.2em;
-            }
-            
-            .title-container {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            .container { flex-direction: column; }
+            .character { width: 200px; }
+            .chibi { width: 250px; height: 250px; }
+            .birthday-title { font-size: 2em; gap: 8px; }
+            h2 { font-size: 1.2em; }
         }
 
         @media (max-width: 480px) {
-            .birthday-title {
-                font-size: 1.6em;
-                gap: 5px;
-            }
-            
-            h2 {
-                font-size: 1.1em;
-            }
+            .birthday-title { font-size: 1.6em; gap: 5px; }
+            h2 { font-size: 1.1em; }
         }
     </style>
 </head>
 <body>
-    <!-- Hiệu ứng bong bóng nền -->
     <div class="bubbles">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
+        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+        <div class="bubble"></div><div class="bubble"></div>
     </div>
 
-    <!-- Hiệu ứng confetti -->
     <div id="confetti-container"></div>
 
     <div class="header">
         <h1 class="birthday-title">
-            <span class="title-icon">🎉</span>
-            Chúc Mừng Sinh Nhật Minh Thùy
-            <span class="title-icon">🎉</span>
+            <span>🎉</span>Chúc Mừng Sinh Nhật Minh Thùy<span>🎉</span>
         </h1>
-        <h2>
-            <span>13/11/2003</span>
-            <span>—</span>
-            <span>Môn yêu thích: Địa Lý</span>
-            <span>🌍</span>
-        </h2>
+        <h2>13/11/2003 — Môn yêu thích: Địa Lý 🌍</h2>
         
-        <!-- Hiệu ứng nến -->
         <div class="candles">
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
+            <div class="candle"></div><div class="candle"></div><div class="candle"></div>
+            <div class="candle"></div><div class="candle"></div>
         </div>
     </div>
 
     <div class="container">
-        <!-- bên trái: tướng 1 -->
         <img src="https://lienquan.garena.vn/wp-content/uploads/2024/07/11817.jpg" alt="Tướng bên trái" class="character" />
         
-        <!-- giữa: ảnh Minh Thùy -->
         <div class="chibi-container">
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
+            <div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div>
             <img src="https://i.postimg.cc/fRkRgxr6/minh-thi.jpg" alt="Minh Thùy" class="chibi" />
             <div class="chibi-label">Càlemcây</div>
         </div>
         
-        <!-- bên phải: tướng 2 -->
         <img src="https://lienquan.garena.vn/wp-content/uploads/2024/07/51911.jpg" alt="Tướng bên phải" class="character" />
     </div>
 
     <div class="birthday-info">
         <p>Chúc Thuỳ luôn vui vẻ, xinh đẹp và đạt nhiều thành công trong cuộc sống!</p>
-        <p>Hy vọng tuổi mới mang đến thật nhiều niềm vui và may mắn 🍀</p>
-        <p>Mong rằng mọi ước mơ của bà sẽ thành hiện thực! ✨</p>
+        <p>Hy vọng tuổi mới mang đến thật nhiều niềm vui và may mắn 💖</p>
+        <p>Mong rằng mọi ước mơ của bạn sẽ thành hiện thực! ✨</p>
     </div>
 
     <div class="footer">
-        <p>Gửi tặng Minh Thùy — từ những người bạn luôn quý bà ✨</p>
+        <p>Gửi tặng Minh Thùy — từ những người bạn luôn yêu quý bạn 💕</p>
     </div>
 
     <script>
-        // Tạo hiệu ứng confetti
         function createConfetti() {
             const container = document.getElementById('confetti-container');
             const colors = ['#ff6b6b', '#48dbfb', '#1dd1a1', '#feca57', '#ff9ff3', '#54a0ff'];
@@ -578,17 +375,11 @@
             }
         }
 
-        // Thêm hiệu ứng khi click vào trang
         document.addEventListener('click', function(e) {
-            createSparkle(e.clientX, e.clientY);
-        });
-
-        // Tạo hiệu ứng lấp lánh khi click
-        function createSparkle(x, y) {
             const sparkle = document.createElement('div');
             sparkle.style.position = 'fixed';
-            sparkle.style.left = x + 'px';
-            sparkle.style.top = y + 'px';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
             sparkle.style.width = '15px';
             sparkle.style.height = '15px';
             sparkle.style.background = 'radial-gradient(circle, #fff, #ffd700, transparent)';
@@ -598,14 +389,9 @@
             sparkle.style.animation = `sparkle 1s ease-out forwards`;
             
             document.body.appendChild(sparkle);
-            
-            // Xóa hiệu ứng sau khi kết thúc
-            setTimeout(() => {
-                document.body.removeChild(sparkle);
-            }, 1000);
-        }
+            setTimeout(() => document.body.removeChild(sparkle), 1000);
+        });
 
-        // Khởi tạo khi trang tải xong
         document.addEventListener('DOMContentLoaded', function() {
             createConfetti();
         });
